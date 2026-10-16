@@ -1,55 +1,80 @@
-# DESAFIO-QA-BEEDOO-2026
+<div align="center">
 
-## Objetivo da aplicação
+# 🧪 Desafio QA — Beedoo
 
-A aplicação disponibilizada possui como objetivo permitir o cadastro e a visualização de cursos.
+### Análise exploratória, modelagem de testes e registro de defeitos em uma aplicação de cursos.
 
-A partir da análise da interface, é possível identificar que o sistema permite registrar cursos contendo informações como nome, descrição, instrutor, datas de início e fim, número de vagas e tipo de curso. Após o cadastro, os cursos são exibidos em formato de listagem através de cards.
+![Ano](https://img.shields.io/badge/desafio-2026-6B7280?style=for-the-badge)
+![QA](https://img.shields.io/badge/foco-Quality_Assurance-7C3AED?style=for-the-badge)
+![Testes](https://img.shields.io/badge/testes-manuais-2563EB?style=for-the-badge)
 
-Dessa forma, o fluxo principal da aplicação consiste em cadastrar cursos e visualizá-los posteriormente na listagem disponível no sistema.
+</div>
 
-## Principais fluxos disponíveis
+> **Desafio técnico concluído em 2026.**  
+> O repositório é mantido como registro de uma atividade de processo seletivo e da abordagem utilizada na análise de qualidade da aplicação.
 
-Durante a exploração da aplicação, foi possível identificar os seguintes fluxos principais:
+## Objetivo
 
-- Cadastro de cursos através do formulário disponível na opção "Cadastrar curso"
-- Visualização dos cursos cadastrados através da opção "Listar cursos"
-- Exclusão de cursos diretamente a partir da listagem
-- Navegação entre as páginas de cadastro e listagem utilizando o menu superior
-- Exibição dinâmica de campos no formulário de acordo com o tipo de curso selecionado (Online ou Presencial)
+A aplicação analisada permite o **cadastro e a visualização de cursos**.
 
+A partir da exploração da interface, foram identificados fluxos para cadastrar cursos com informações como nome, descrição, instrutor, datas, número de vagas e tipo de curso, além da listagem e exclusão dos registros cadastrados.
 
-## Pontos críticos para teste
+## Escopo analisado
 
-Durante a análise da aplicação, alguns pontos foram considerados mais críticos para validação:
+Foram considerados os seguintes fluxos principais:
 
-- Validação dos campos obrigatórios no cadastro de cursos
-- Consistência das informações exibidas na listagem após o cadastro
-- Funcionamento correto da exclusão de cursos
-- Comportamento dinâmico do campo "Tipo de curso", que altera os campos exibidos no formulário
-- Validação de tipos de dados, como o campo "Número de vagas"
-- Comportamento da interface quando dados muito longos são inseridos
+- cadastro de cursos;
+- visualização dos cursos cadastrados;
+- exclusão de cursos;
+- navegação entre cadastro e listagem;
+- comportamento dinâmico do formulário conforme o tipo de curso selecionado, **Online** ou **Presencial**.
 
-## Decisões tomadas para criação dos testes
+## Pontos críticos de teste
 
-A criação dos cenários de teste buscou cobrir tanto o fluxo principal da aplicação quanto possíveis comportamentos inesperados.
+A análise priorizou:
 
-Foram considerados cenários positivos, como o cadastro correto de cursos e a visualização na listagem, além de cenários negativos envolvendo validações de campos e possíveis falhas no sistema.
+- validação de campos obrigatórios;
+- consistência dos dados após o cadastro;
+- comportamento da exclusão de cursos;
+- alteração dinâmica dos campos conforme o tipo de curso;
+- validação de tipos de dados, como número de vagas;
+- comportamento da interface diante de textos longos;
+- navegação entre os principais fluxos da aplicação.
 
-Também foram incluídos testes relacionados à navegação entre páginas e ao comportamento dinâmico do formulário, buscando identificar inconsistências que possam impactar a experiência do usuário.
+## Estratégia utilizada
 
-## Estrutura do repositório
+Os testes foram elaborados a partir da exploração da aplicação, buscando cobrir o fluxo principal e situações com potencial de comportamento inesperado.
 
-O repositório contém os seguintes materiais relacionados ao desafio:
+Foram contemplados:
 
-- Planilha com os cenários e casos de teste
-- Registro dos bugs identificados durante a execução dos testes
-- Evidências da execução dos testes (prints e gravações)
+- cenários positivos;
+- cenários negativos;
+- validações de campos;
+- navegação;
+- comportamento dinâmico do formulário;
+- consistência das informações apresentadas ao usuário.
 
-## Links do desafio
+## Resultado da análise
 
-Planilha com cenários e casos de teste:  
-https://docs.google.com/spreadsheets/d/1H2AhGy3xN-7dRW9IzVCwguuY--hDI-sqTlKtQfBOjTQ
+Durante a execução foram registrados **4 defeitos**:
 
-Evidências da execução dos testes:  
-https://drive.google.com/drive/folders/1zCdVUFQ3sWzKP9Bpy2dWCkOLZGDVQ3VC
+| ID | Resumo | Impacto |
+| --- | --- | --- |
+| BUG01 | Cadastro permitido com formulário vazio | Alto |
+| BUG02 | Mensagem de exclusão é exibida, mas curso permanece na listagem | Alto |
+| BUG03 | Descrição longa compromete a proporção do card | Baixo |
+| BUG04 | Campo “Tipo de curso” permite selecionar novamente “Selecione...” | Baixo |
+
+Os detalhes completos de reprodução, resultado atual e resultado esperado estão em [`bugs.md`](bugs.md).
+
+## Artefatos
+
+| Material | Conteúdo |
+| --- | --- |
+| [Cenários e casos de teste](https://docs.google.com/spreadsheets/d/1H2AhGy3xN-7dRW9IzVCwguuY--hDI-sqTlKtQfBOjTQ) | Planilha utilizada para modelagem e registro dos testes |
+| [`bugs.md`](bugs.md) | Registro estruturado dos defeitos encontrados |
+| [Evidências](https://drive.google.com/drive/folders/1zCdVUFQ3sWzKP9Bpy2dWCkOLZGDVQ3VC) | Prints e gravações produzidos durante a execução |
+
+## Contexto
+
+Este repositório representa uma atividade pontual realizada em **2026**. Ele permanece disponível como histórico do raciocínio de teste, da organização das evidências e da documentação de defeitos utilizada no desafio.
